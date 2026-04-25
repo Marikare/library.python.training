@@ -4,7 +4,7 @@ def delete_author():
     conn = get_connection()
     cursor = conn.cursor()
 
-    ID = int(input("Enter the ID you want to delete:"))
+    ID = int(input("Enter the ID you want to delete: "))
 
     cursor.execute("SELECT * FROM authors WHERE id = ?", (ID,))
     row = cursor.fetchone()

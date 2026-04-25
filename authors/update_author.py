@@ -4,7 +4,7 @@ def update_author():
     conn = get_connection()
     cursor = conn.cursor()
 
-    ID = int(input("Enter the ID you want to update:"))
+    ID = int(input("Enter the ID you want to update: "))
 
     cursor.execute("SELECT * FROM authors WHERE id = ?", (ID,))
     row = cursor.fetchone()
@@ -19,7 +19,7 @@ def update_author():
     birth_date = (input("New date (leave empty to keep current): "))
     if birth_date == "" :
         birth_date = row[2]
-    nationality = input("New nationality (leave empty to keep current):")
+    nationality = input("New nationality (leave empty to keep current): ")
     if nationality == "" :
         nationality = row[3]
     description = input("New description (leave empty to keep current): ")

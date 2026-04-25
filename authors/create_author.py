@@ -1,10 +1,10 @@
 from database import get_connection
 
 def create_author():
-    name = input("Enter the author's name:")
-    birth_date = input("Enter the author's date of birth:")
-    nationality = input("Enter the author's nationality:")
-    description = input("Enter the author's description (optional):")
+    name = input("Enter the author's name: ")
+    birth_date = input("Enter the author's date of birth: ")
+    nationality = input("Enter the author's nationality: ")
+    description = input("Enter the author's description (optional): ")
 
     conn = get_connection()
     cursor = conn.cursor()
